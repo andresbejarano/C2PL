@@ -1,0 +1,1389 @@
+Microsoft Windows [Versión 10.0.10586]
+(c) 2015 Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\AndresMauricio.ANDRES-LAPTOP>cd workspace\C2PL
+
+C:\Users\AndresMauricio.ANDRES-LAPTOP\workspace\C2PL>start rmiregistry -J-Djava.rmi.server.codebase=file:bin\
+
+C:\Users\AndresMauricio.ANDRES-LAPTOP\workspace\C2PL>java -classpath bin;lib\sqlite-jdbc-3.8.11.2.jar -Djava.security.policy=policies\server.policy centralsite.CentralSite 45
+[2016-04-13 22:38:26.762] centralsite.CentralSite: Timer for the WFG checking initiated
+[2016-04-13 22:38:26.766] centralsite.CentralSite: Deadlock is checked every 3000 miliseconds
+
+[2016-04-13 22:38:26.768] centralsite.CentralSite: Central Site initiated at port 45
+[2016-04-13 22:38:29.820] centralsite.CentralSite: RMI Registry: <c2pl>
+[2016-04-13 22:38:29.822] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:38:29.878] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:38:29.880] centralsite.CentralSite: Deadlock checked
+
+[2016-04-13 22:38:32.767] centralsite.CentralSite: RMI Registry: <c2pl>
+[2016-04-13 22:38:32.769] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:38:32.770] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:38:32.773] centralsite.CentralSite: Deadlock checked
+
+[2016-04-13 22:38:35.767] centralsite.CentralSite: RMI Registry: <c2pl>
+[2016-04-13 22:38:35.769] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:38:35.771] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:38:35.773] centralsite.CentralSite: Deadlock checked
+
+[2016-04-13 22:38:38.767] centralsite.CentralSite: RMI Registry: <c2pl>
+[2016-04-13 22:38:38.769] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:38:38.771] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:38:38.773] centralsite.CentralSite: Deadlock checked
+
+[2016-04-13 22:38:41.767] centralsite.CentralSite: RMI Registry: <c2pl>
+[2016-04-13 22:38:41.769] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:38:41.772] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:38:41.774] centralsite.CentralSite: Deadlock checked
+
+[2016-04-13 22:38:43.818] centralsite.CentralSite: Next site id requested. Return 1
+
+[2016-04-13 22:38:43.889] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:43.891] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:43.894
+Lock Table
+[X, read, transaction 101, siteId 1 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:38:44.106] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:44.108] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:44.111
+Lock Table
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:38:44.224] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:44.226] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:44.229
+Lock Table
+[Y, read, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:38:44.442] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:44.445] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:44.448
+Lock Table
+[Y, read/write, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:38:44.562] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:44.565] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:44.568
+Lock Table
+[A, read, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[]
+
+
+[2016-04-13 22:38:44.768] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1>
+[2016-04-13 22:38:44.770] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:38:44.772] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:38:44.775] centralsite.CentralSite: Deadlock checked
+
+
+[2016-04-13 22:38:44.786] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:44.789] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:44.792
+Lock Table
+[A, read/write, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:38:44.908] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:44.910] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:44.914
+Lock Table
+[A, read/write, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[B, read, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[]
+
+
+[2016-04-13 22:38:45.36] centralsite.CentralSite: Next site id requested. Return 2
+
+[2016-04-13 22:38:45.102] centralsite.CentralSite: Operation from transaction 201 requests a lock
+[2016-04-13 22:38:45.105] centralsite.CentralSite: Operation from transaction 201 lock request result is false
+Timestamp: 2016-04-13 22:38:45.109
+Lock Table
+[A, read/write, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[B, read, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 201, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:45.134] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:45.137] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:45.140
+Lock Table
+[A, read/write, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[B, read/write, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 201, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:45.262] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:45.265] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:45.267
+Lock Table
+[A, read/write, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[B, read/write, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 201, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:45.489] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:45.492] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:45.495
+Lock Table
+[A, read/write, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[B, read/write, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 201, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:45.615] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:45.618] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:45.621
+Lock Table
+[A, read/write, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[B, read/write, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 201, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:45.845] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:45.847] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:45.850
+Lock Table
+[A, read/write, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[B, read/write, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 201, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:45.971] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:45.973] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:45.977
+Lock Table
+[A, read/write, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[B, read/write, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 201, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:46.197] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:46.199] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:46.202
+Lock Table
+[A, read/write, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[B, read/write, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 201, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:46.323] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:46.326] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:46.329
+Lock Table
+[A, read/write, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[B, read/write, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 201, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:46.548] centralsite.CentralSite: Operation from transaction 101 requests a lock
+[2016-04-13 22:38:46.551] centralsite.CentralSite: Operation from transaction 101 lock request result is true
+Timestamp: 2016-04-13 22:38:46.554
+Lock Table
+[A, read/write, transaction 101, siteId 1 ]
+
+[Y, read/write, transaction 101, siteId 1 ]
+
+[B, read/write, transaction 101, siteId 1 ]
+
+[X, read/write, transaction 101, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 201, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:47.193] centralsite.CentralSite: Transaction 101 requests to release its locks
+Timestamp: 2016-04-13 22:38:47.195
+Transaction 101 releases all of its locks
+[2016-04-13 22:38:47.199] centralsite.CentralSite: Number of unlocked sites by transaction 101 = 1
+[2016-04-13 22:38:47.202] centralsite.CentralSite: Unblocking site 2
+[2016-04-13 22:38:47.203] centralsite.CentralSite: Requesting Data Site stub for site 2
+
+[2016-04-13 22:38:47.206] centralsite.CentralSite: getDataSiteStub
+[2016-04-13 22:38:47.210] centralsite.CentralSite: Get stub for data site 2
+[2016-04-13 22:38:47.212] centralsite.CentralSite: Obtained acces to the registry
+[2016-04-13 22:38:47.215] centralsite.CentralSite: Data Site Stub for site 2 obtained
+[2016-04-13 22:38:47.217] centralsite.CentralSite: Stub obtained for data site 2
+[2016-04-13 22:38:47.219] centralsite.CentralSite: Requesting unblocking data site 2
+[2016-04-13 22:38:47.224] centralsite.CentralSite: Information for site 2 was printed
+[2016-04-13 22:38:47.230] centralsite.CentralSite: Data site 2 unblocked
+Timestamp: 2016-04-13 22:38:47.231
+Lock Table
+[X, read, transaction 201, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:38:47.249] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:47.251] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:47.254
+Lock Table
+[X, read, transaction 201, siteId 2 ]
+[X, read, transaction 102, siteId 1 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:38:47.467] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:47.470] centralsite.CentralSite: Operation from transaction 102 lock request result is false
+Timestamp: 2016-04-13 22:38:47.473
+Lock Table
+[X, read, transaction 201, siteId 2 ]
+[X, read, transaction 102, siteId 1 ]
+
+Queue Table
+[WRITE(X), transaction 102, siteID 1 ]
+
+
+
+[2016-04-13 22:38:47.768] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:38:47.771] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:38:47.795] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:38:47.797] centralsite.CentralSite: Deadlock checked
+
+
+[2016-04-13 22:38:48.337] centralsite.CentralSite: Operation from transaction 201 requests a lock
+[2016-04-13 22:38:48.339] centralsite.CentralSite: Operation from transaction 201 lock request result is false
+Timestamp: 2016-04-13 22:38:48.342
+Lock Table
+[X, read, transaction 201, siteId 2 ]
+[X, read, transaction 102, siteId 1 ]
+
+Queue Table
+[WRITE(X), transaction 102, siteID 1 ]
+[WRITE(X), transaction 201, siteID 2 ]
+
+
+
+[2016-04-13 22:38:50.769] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:38:50.771] centralsite.CentralSite: Checking Deadlocks...
+Deadlock Detected!!!!!!!
+Deadlock in 102 to 201
+Transaction to be aborted: 201
+Timestamp: 2016-04-13 22:38:50.777
+Lock Table
+[X, read, transaction 201, siteId 2 ]
+[X, read, transaction 102, siteId 1 ]
+
+Queue Table
+[WRITE(X), transaction 102, siteID 1 ]
+[WRITE(X), transaction 201, siteID 2 ]
+
+
+
+Timestamp: 2016-04-13 22:38:50.790
+Lock Table
+[X, read, transaction 201, siteId 2 ]
+[X, read, transaction 102, siteId 1 ]
+
+Queue Table
+[WRITE(X), transaction 102, siteID 1 ]
+
+
+
+Timestamp: 2016-04-13 22:38:50.798
+Transaction 201 releases all of its locks
+Timestamp: 2016-04-13 22:38:50.800
+Lock Table
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[]
+
+
+[2016-04-13 22:38:50.811] centralsite.CentralSite: Deadlock information obtained
+[2016-04-13 22:38:50.812] centralsite.CentralSite: Transaction to be aborted: 201 from site 2
+
+[2016-04-13 22:38:50.815] centralsite.CentralSite: getDataSiteStub
+[2016-04-13 22:38:50.819] centralsite.CentralSite: Get stub for data site 2
+[2016-04-13 22:38:50.821] centralsite.CentralSite: Obtained acces to the registry
+[2016-04-13 22:38:50.824] centralsite.CentralSite: Data Site Stub for site 2 obtained
+[2016-04-13 22:38:50.835] centralsite.CentralSite: Data site 2 aborted the transaction
+[2016-04-13 22:38:50.837] centralsite.CentralSite: 1 sites will be unlocked
+
+[2016-04-13 22:38:50.840] centralsite.CentralSite: getDataSiteStub
+[2016-04-13 22:38:50.843] centralsite.CentralSite: Get stub for data site 1
+[2016-04-13 22:38:50.845] centralsite.CentralSite: Obtained acces to the registry
+[2016-04-13 22:38:50.848] centralsite.CentralSite: Data Site Stub for site 1 obtained
+[2016-04-13 22:38:50.850] centralsite.CentralSite: Stub for data site 1 obtained
+[2016-04-13 22:38:50.852] centralsite.CentralSite: Stub says is not null
+[2016-04-13 22:38:50.859] centralsite.CentralSite: Data Site 1 unblocked!
+[2016-04-13 22:38:50.861] centralsite.CentralSite: Deadlock checked
+
+
+[2016-04-13 22:38:51.369] centralsite.CentralSite: Operation from transaction 202 requests a lock
+[2016-04-13 22:38:51.373] centralsite.CentralSite: Operation from transaction 202 lock request result is false
+Timestamp: 2016-04-13 22:38:51.376
+Lock Table
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:51.593] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:51.595] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:51.598
+Lock Table
+[Y, read, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:51.814] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:51.817] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:51.820
+Lock Table
+[Y, read/write, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:51.934] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:51.936] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:51.939
+Lock Table
+[A, read, transaction 102, siteId 1 ]
+
+[Y, read/write, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:52.155] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:52.157] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:52.160
+Lock Table
+[A, read/write, transaction 102, siteId 1 ]
+
+[Y, read/write, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:52.279] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:52.281] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:52.284
+Lock Table
+[A, read/write, transaction 102, siteId 1 ]
+
+[Y, read/write, transaction 102, siteId 1 ]
+
+[B, read, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:52.505] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:52.507] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:52.510
+Lock Table
+[A, read/write, transaction 102, siteId 1 ]
+
+[Y, read/write, transaction 102, siteId 1 ]
+
+[B, read/write, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:52.629] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:52.633] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:52.636
+Lock Table
+[A, read/write, transaction 102, siteId 1 ]
+
+[Y, read/write, transaction 102, siteId 1 ]
+
+[B, read/write, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:52.857] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:52.859] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:52.862
+Lock Table
+[A, read/write, transaction 102, siteId 1 ]
+
+[Y, read/write, transaction 102, siteId 1 ]
+
+[B, read/write, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:52.983] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:52.985] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:52.989
+Lock Table
+[A, read/write, transaction 102, siteId 1 ]
+
+[Y, read/write, transaction 102, siteId 1 ]
+
+[B, read/write, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:53.204] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:53.206] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:53.209
+Lock Table
+[A, read/write, transaction 102, siteId 1 ]
+
+[Y, read/write, transaction 102, siteId 1 ]
+
+[B, read/write, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:53.330] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:53.333] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:53.336
+Lock Table
+[A, read/write, transaction 102, siteId 1 ]
+
+[Y, read/write, transaction 102, siteId 1 ]
+
+[B, read/write, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:53.556] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:53.558] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:53.561
+Lock Table
+[A, read/write, transaction 102, siteId 1 ]
+
+[Y, read/write, transaction 102, siteId 1 ]
+
+[B, read/write, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:53.681] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:53.684] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:53.687
+Lock Table
+[A, read/write, transaction 102, siteId 1 ]
+
+[Y, read/write, transaction 102, siteId 1 ]
+
+[B, read/write, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+[2016-04-13 22:38:53.770] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:38:53.772] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:38:53.774] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:38:53.776] centralsite.CentralSite: Deadlock checked
+
+
+[2016-04-13 22:38:53.904] centralsite.CentralSite: Operation from transaction 102 requests a lock
+[2016-04-13 22:38:53.906] centralsite.CentralSite: Operation from transaction 102 lock request result is true
+Timestamp: 2016-04-13 22:38:53.909
+Lock Table
+[A, read/write, transaction 102, siteId 1 ]
+
+[Y, read/write, transaction 102, siteId 1 ]
+
+[B, read/write, transaction 102, siteId 1 ]
+
+[X, read/write, transaction 102, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 202, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:54.487] centralsite.CentralSite: Transaction 102 requests to release its locks
+Timestamp: 2016-04-13 22:38:54.490
+Transaction 102 releases all of its locks
+[2016-04-13 22:38:54.493] centralsite.CentralSite: Number of unlocked sites by transaction 102 = 1
+[2016-04-13 22:38:54.496] centralsite.CentralSite: Unblocking site 2
+[2016-04-13 22:38:54.498] centralsite.CentralSite: Requesting Data Site stub for site 2
+
+[2016-04-13 22:38:54.501] centralsite.CentralSite: getDataSiteStub
+[2016-04-13 22:38:54.505] centralsite.CentralSite: Get stub for data site 2
+[2016-04-13 22:38:54.507] centralsite.CentralSite: Obtained acces to the registry
+[2016-04-13 22:38:54.510] centralsite.CentralSite: Data Site Stub for site 2 obtained
+[2016-04-13 22:38:54.512] centralsite.CentralSite: Stub obtained for data site 2
+[2016-04-13 22:38:54.514] centralsite.CentralSite: Requesting unblocking data site 2
+[2016-04-13 22:38:54.519] centralsite.CentralSite: Information for site 2 was printed
+[2016-04-13 22:38:54.528] centralsite.CentralSite: Data site 2 unblocked
+Timestamp: 2016-04-13 22:38:54.529
+Lock Table
+[X, read, transaction 202, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:38:54.548] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:54.551] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:54.554
+Lock Table
+[X, read, transaction 202, siteId 2 ]
+[X, read, transaction 103, siteId 1 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:38:54.767] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:54.769] centralsite.CentralSite: Operation from transaction 103 lock request result is false
+Timestamp: 2016-04-13 22:38:54.772
+Lock Table
+[X, read, transaction 202, siteId 2 ]
+[X, read, transaction 103, siteId 1 ]
+
+Queue Table
+[WRITE(X), transaction 103, siteID 1 ]
+
+
+
+
+[2016-04-13 22:38:55.593] centralsite.CentralSite: Operation from transaction 202 requests a lock
+[2016-04-13 22:38:55.595] centralsite.CentralSite: Operation from transaction 202 lock request result is false
+Timestamp: 2016-04-13 22:38:55.599
+Lock Table
+[X, read, transaction 202, siteId 2 ]
+[X, read, transaction 103, siteId 1 ]
+
+Queue Table
+[WRITE(X), transaction 103, siteID 1 ]
+[WRITE(X), transaction 202, siteID 2 ]
+
+
+
+[2016-04-13 22:38:56.770] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:38:56.772] centralsite.CentralSite: Checking Deadlocks...
+Deadlock Detected!!!!!!!
+Deadlock in 103 to 202
+Transaction to be aborted: 202
+Timestamp: 2016-04-13 22:38:56.777
+Lock Table
+[X, read, transaction 202, siteId 2 ]
+[X, read, transaction 103, siteId 1 ]
+
+Queue Table
+[WRITE(X), transaction 103, siteID 1 ]
+[WRITE(X), transaction 202, siteID 2 ]
+
+
+
+Timestamp: 2016-04-13 22:38:56.792
+Lock Table
+[X, read, transaction 202, siteId 2 ]
+[X, read, transaction 103, siteId 1 ]
+
+Queue Table
+[WRITE(X), transaction 103, siteID 1 ]
+
+
+
+Timestamp: 2016-04-13 22:38:56.803
+Transaction 202 releases all of its locks
+Timestamp: 2016-04-13 22:38:56.806
+Lock Table
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[]
+
+
+[2016-04-13 22:38:56.813] centralsite.CentralSite: Deadlock information obtained
+[2016-04-13 22:38:56.815] centralsite.CentralSite: Transaction to be aborted: 202 from site 2
+
+[2016-04-13 22:38:56.818] centralsite.CentralSite: getDataSiteStub
+[2016-04-13 22:38:56.820] centralsite.CentralSite: Get stub for data site 2
+[2016-04-13 22:38:56.822] centralsite.CentralSite: Obtained acces to the registry
+[2016-04-13 22:38:56.825] centralsite.CentralSite: Data Site Stub for site 2 obtained
+[2016-04-13 22:38:56.836] centralsite.CentralSite: Data site 2 aborted the transaction
+[2016-04-13 22:38:56.838] centralsite.CentralSite: 1 sites will be unlocked
+
+[2016-04-13 22:38:56.841] centralsite.CentralSite: getDataSiteStub
+[2016-04-13 22:38:56.844] centralsite.CentralSite: Get stub for data site 1
+[2016-04-13 22:38:56.846] centralsite.CentralSite: Obtained acces to the registry
+[2016-04-13 22:38:56.849] centralsite.CentralSite: Data Site Stub for site 1 obtained
+[2016-04-13 22:38:56.851] centralsite.CentralSite: Stub for data site 1 obtained
+[2016-04-13 22:38:56.853] centralsite.CentralSite: Stub says is not null
+[2016-04-13 22:38:56.861] centralsite.CentralSite: Data Site 1 unblocked!
+[2016-04-13 22:38:56.863] centralsite.CentralSite: Deadlock checked
+
+
+[2016-04-13 22:38:57.624] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:38:57.628] centralsite.CentralSite: Operation from transaction 203 lock request result is false
+Timestamp: 2016-04-13 22:38:57.631
+Lock Table
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:57.893] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:57.896] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:57.899
+Lock Table
+[Y, read, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:58.113] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:58.115] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:58.118
+Lock Table
+[Y, read/write, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:58.227] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:58.229] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:58.232
+Lock Table
+[A, read, transaction 103, siteId 1 ]
+
+[Y, read/write, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:58.447] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:58.449] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:58.452
+Lock Table
+[A, read/write, transaction 103, siteId 1 ]
+
+[Y, read/write, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:58.570] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:58.572] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:58.576
+Lock Table
+[A, read/write, transaction 103, siteId 1 ]
+
+[Y, read/write, transaction 103, siteId 1 ]
+
+[B, read, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:58.796] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:58.798] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:58.801
+Lock Table
+[A, read/write, transaction 103, siteId 1 ]
+
+[Y, read/write, transaction 103, siteId 1 ]
+
+[B, read/write, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:58.919] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:58.922] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:58.925
+Lock Table
+[A, read/write, transaction 103, siteId 1 ]
+
+[Y, read/write, transaction 103, siteId 1 ]
+
+[B, read/write, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:59.146] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:59.148] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:59.152
+Lock Table
+[A, read/write, transaction 103, siteId 1 ]
+
+[Y, read/write, transaction 103, siteId 1 ]
+
+[B, read/write, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:59.272] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:59.274] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:59.277
+Lock Table
+[A, read/write, transaction 103, siteId 1 ]
+
+[Y, read/write, transaction 103, siteId 1 ]
+
+[B, read/write, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:59.499] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:59.502] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:59.505
+Lock Table
+[A, read/write, transaction 103, siteId 1 ]
+
+[Y, read/write, transaction 103, siteId 1 ]
+
+[B, read/write, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:59.625] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:59.627] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:59.631
+Lock Table
+[A, read/write, transaction 103, siteId 1 ]
+
+[Y, read/write, transaction 103, siteId 1 ]
+
+[B, read/write, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+[2016-04-13 22:38:59.770] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:38:59.772] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:38:59.774] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:38:59.777] centralsite.CentralSite: Deadlock checked
+
+
+[2016-04-13 22:38:59.845] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:59.847] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:59.850
+Lock Table
+[A, read/write, transaction 103, siteId 1 ]
+
+[Y, read/write, transaction 103, siteId 1 ]
+
+[B, read/write, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:38:59.966] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:38:59.970] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:38:59.973
+Lock Table
+[A, read/write, transaction 103, siteId 1 ]
+
+[Y, read/write, transaction 103, siteId 1 ]
+
+[B, read/write, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:39:00.194] centralsite.CentralSite: Operation from transaction 103 requests a lock
+[2016-04-13 22:39:00.196] centralsite.CentralSite: Operation from transaction 103 lock request result is true
+Timestamp: 2016-04-13 22:39:00.199
+Lock Table
+[A, read/write, transaction 103, siteId 1 ]
+
+[Y, read/write, transaction 103, siteId 1 ]
+
+[B, read/write, transaction 103, siteId 1 ]
+
+[X, read/write, transaction 103, siteId 1 ]
+
+Queue Table
+[READ(X), transaction 203, siteID 2 ]
+
+
+
+
+[2016-04-13 22:39:00.787] centralsite.CentralSite: Transaction 103 requests to release its locks
+Timestamp: 2016-04-13 22:39:00.790
+Transaction 103 releases all of its locks
+[2016-04-13 22:39:00.794] centralsite.CentralSite: Number of unlocked sites by transaction 103 = 1
+[2016-04-13 22:39:00.797] centralsite.CentralSite: Unblocking site 2
+[2016-04-13 22:39:00.798] centralsite.CentralSite: Requesting Data Site stub for site 2
+
+[2016-04-13 22:39:00.801] centralsite.CentralSite: getDataSiteStub
+[2016-04-13 22:39:00.802] centralsite.CentralSite: Get stub for data site 2
+[2016-04-13 22:39:00.805] centralsite.CentralSite: Obtained acces to the registry
+[2016-04-13 22:39:00.808] centralsite.CentralSite: Data Site Stub for site 2 obtained
+[2016-04-13 22:39:00.810] centralsite.CentralSite: Stub obtained for data site 2
+[2016-04-13 22:39:00.812] centralsite.CentralSite: Requesting unblocking data site 2
+[2016-04-13 22:39:00.816] centralsite.CentralSite: Information for site 2 was printed
+[2016-04-13 22:39:00.826] centralsite.CentralSite: Data site 2 unblocked
+Timestamp: 2016-04-13 22:39:00.828
+Lock Table
+[X, read, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:01.852] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:01.854] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:01.857
+Lock Table
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:01.969] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:01.972] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:01.975
+Lock Table
+[Y, read, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:02.186] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:02.188] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:02.192
+Lock Table
+[Y, read/write, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:02.304] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:02.306] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:02.310
+Lock Table
+[A, read, transaction 203, siteId 2 ]
+
+[Y, read/write, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:02.525] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:02.527] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:02.531
+Lock Table
+[A, read/write, transaction 203, siteId 2 ]
+
+[Y, read/write, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:02.647] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:02.649] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:02.652
+Lock Table
+[A, read/write, transaction 203, siteId 2 ]
+
+[Y, read/write, transaction 203, siteId 2 ]
+
+[B, read, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+[2016-04-13 22:39:02.771] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:39:02.773] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:39:02.775] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:39:02.778] centralsite.CentralSite: Deadlock checked
+
+
+[2016-04-13 22:39:02.870] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:02.872] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:02.876
+Lock Table
+[A, read/write, transaction 203, siteId 2 ]
+
+[Y, read/write, transaction 203, siteId 2 ]
+
+[B, read/write, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:02.994] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:02.996] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:03.0
+Lock Table
+[A, read/write, transaction 203, siteId 2 ]
+
+[Y, read/write, transaction 203, siteId 2 ]
+
+[B, read/write, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:03.219] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:03.221] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:03.224
+Lock Table
+[A, read/write, transaction 203, siteId 2 ]
+
+[Y, read/write, transaction 203, siteId 2 ]
+
+[B, read/write, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:03.343] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:03.345] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:03.348
+Lock Table
+[A, read/write, transaction 203, siteId 2 ]
+
+[Y, read/write, transaction 203, siteId 2 ]
+
+[B, read/write, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:03.569] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:03.571] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:03.575
+Lock Table
+[A, read/write, transaction 203, siteId 2 ]
+
+[Y, read/write, transaction 203, siteId 2 ]
+
+[B, read/write, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:03.693] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:03.696] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:03.699
+Lock Table
+[A, read/write, transaction 203, siteId 2 ]
+
+[Y, read/write, transaction 203, siteId 2 ]
+
+[B, read/write, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:03.920] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:03.923] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:03.926
+Lock Table
+[A, read/write, transaction 203, siteId 2 ]
+
+[Y, read/write, transaction 203, siteId 2 ]
+
+[B, read/write, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:04.43] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:04.45] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:04.49
+Lock Table
+[A, read/write, transaction 203, siteId 2 ]
+
+[Y, read/write, transaction 203, siteId 2 ]
+
+[B, read/write, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:04.268] centralsite.CentralSite: Operation from transaction 203 requests a lock
+[2016-04-13 22:39:04.271] centralsite.CentralSite: Operation from transaction 203 lock request result is true
+Timestamp: 2016-04-13 22:39:04.274
+Lock Table
+[A, read/write, transaction 203, siteId 2 ]
+
+[Y, read/write, transaction 203, siteId 2 ]
+
+[B, read/write, transaction 203, siteId 2 ]
+
+[X, read/write, transaction 203, siteId 2 ]
+
+Queue Table
+[]
+
+
+
+[2016-04-13 22:39:04.913] centralsite.CentralSite: Transaction 203 requests to release its locks
+Timestamp: 2016-04-13 22:39:04.916
+Transaction 203 releases all of its locks
+[2016-04-13 22:39:04.920] centralsite.CentralSite: Number of unlocked sites by transaction 203 = 0
+Timestamp: 2016-04-13 22:39:04.922
+Lock Table
+[]
+Queue Table
+[]
+
+
+[2016-04-13 22:39:05.771] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:39:05.773] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:39:05.775] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:39:05.777] centralsite.CentralSite: Deadlock checked
+
+[2016-04-13 22:39:08.771] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:39:08.773] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:39:08.775] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:39:08.777] centralsite.CentralSite: Deadlock checked
+
+[2016-04-13 22:39:11.771] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:39:11.773] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:39:11.776] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:39:11.779] centralsite.CentralSite: Deadlock checked
+
+[2016-04-13 22:39:14.772] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:39:14.774] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:39:14.776] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:39:14.779] centralsite.CentralSite: Deadlock checked
+
+[2016-04-13 22:39:17.772] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:39:17.775] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:39:17.777] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:39:17.779] centralsite.CentralSite: Deadlock checked
+
+[2016-04-13 22:39:20.773] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:39:20.775] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:39:20.777] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:39:20.779] centralsite.CentralSite: Deadlock checked
+
+[2016-04-13 22:39:23.773] centralsite.CentralSite: RMI Registry: <c2pl, c2pl1, c2pl2>
+[2016-04-13 22:39:23.776] centralsite.CentralSite: Checking Deadlocks...
+[2016-04-13 22:39:23.778] centralsite.CentralSite: Deadlock list is null = No deadlocks found
+[2016-04-13 22:39:23.780] centralsite.CentralSite: Deadlock checked
+
+
+C:\Users\AndresMauricio.ANDRES-LAPTOP\workspace\C2PL>
