@@ -5,13 +5,12 @@ systems. It is based on the C2PL algorithms described on Principles of Distribut
 by Ozsu and Valduriez.
 
 C2PL uses the JDBC library for SQLite 3:
-
-	https://bitbucket.org/xerial/sqlite-jdbc
-	https://bitbucket.org/xerial/sqlite-jdbc/downloads
+1. <https://bitbucket.org/xerial/sqlite-jdbc>
+2. <https://bitbucket.org/xerial/sqlite-jdbc/downloads>
 
 C2PL bases its functionality on Java RMI:
 
-	https://docs.oracle.com/javase/tutorial/rmi/overview.html
+* <https://docs.oracle.com/javase/tutorial/rmi/overview.html>
 
 
 ### Running the Central Site
@@ -30,7 +29,7 @@ Running the central site requires to start the rmiregistry service before runnin
 	java -classpath bin;lib\sqlite-jdbc-3.8.11.2.jar -Djava.security.policy=policies\server.policy -Djava.rmi.server.hostname=192.168.1.6 centralsite.CentralSite 45 1000
 	
 or	
-	java -classpath bin;lib\sqlite-jdbc-3.8.11.2.jar -Djava.security.policy=policies\server.policy centralsite.CentralSite 45 1000
+	java -classpath bin;lib\sqlite-jdbc-3.8.11.2.jar -Djava.security.policy=policies\server.policy centralsite.CentralSite 45 1000 true
 
 Note:
 - 45 is the port where the Central Site receives the transactions from the Data Sites.
