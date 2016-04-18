@@ -15,7 +15,7 @@ public class Transaction implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/* An offset for transaction id generation */
-	public static final int ID_OFFSET = 100;
+	public static final int ID_OFFSET = 10000;
 	
 	/* The delay between operations */
 	public static final int DELAY_MILLISEC = 100;

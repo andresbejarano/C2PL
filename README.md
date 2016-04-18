@@ -28,6 +28,7 @@ Running the central site requires to start the rmiregistry service before runnin
 3) Start the Central Site object:
 
 	java -classpath bin;lib\sqlite-jdbc-3.8.11.2.jar -Djava.security.policy=policies\server.policy -Djava.rmi.server.hostname=192.168.1.6 centralsite.CentralSite 45 1000
+	
 or	
 	java -classpath bin;lib\sqlite-jdbc-3.8.11.2.jar -Djava.security.policy=policies\server.policy centralsite.CentralSite 45 1000
 
@@ -43,6 +44,7 @@ Note:
 2) Start the Data Site object:
 
 	java -classpath bin;lib\sqlite-jdbc-3.8.11.2.jar -Djava.rmi.server.codebase=file:bin\ -Djava.security.policy=policies\client.policy datasite.DataSite 192.168.1.6 45 transactions/transactions_many_1.txt
+	
 or
 	java -classpath bin;lib\sqlite-jdbc-3.8.11.2.jar -Djava.rmi.server.codebase=file:bin\ -Djava.security.policy=policies\client.policy datasite.DataSite localhost 45 transactions/transactions_many_1.txt
 

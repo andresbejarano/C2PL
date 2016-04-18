@@ -165,7 +165,7 @@ public class DataSite implements Runnable, DataSiteInterface {
 	public void abort() throws RemoteException {
 		
 		abort = true;
-		print(TAG, "Site is now aborted");
+		print(TAG, "Current transaction is aborted!!");
 		
 		unblock();
 		//notifyAll();
@@ -176,22 +176,20 @@ public class DataSite implements Runnable, DataSiteInterface {
 	 */
 	public synchronized void blocked() {
 		
-		/**/
+		/* Try to manage the blocked site */
 		try {
 			
-			/**/
+			/* Indicate the site is blocked */
 			blocked = true;
 			
-			/**/
+			/* Repeat while the site is blocked */
 			while(blocked) {
 				
-				/**/
-				System.out.println(DataSite.getTimestamp() + " " + "Site " + id + " blocked. Waiting for events...");
+				/* Show that the site is blocked */
+				print(TAG, "Site " + id + " blocked. Waiting for events...");
 				
-				/**/
+				/* Put the thread to sleep one second */
 				Thread.sleep(1000);
-				//wait();
-				//TODO instead of wait try sleep a given amount of time
 			}
 		}
 		catch(InterruptedException e) {
@@ -230,7 +228,7 @@ public class DataSite implements Runnable, DataSiteInterface {
 						print(TAG, "Transaction is null");
 						
 						/**/
-						System.out.println(DataSite.getTimestamp() + " " + "Site " + id + " waiting for next transaction");
+						print(TAG, "Site " + id + " waiting for next transaction");
 						
 						/**/
 						blocked();
@@ -240,7 +238,7 @@ public class DataSite implements Runnable, DataSiteInterface {
 					else {
 						
 						String tag = "[T" + transaction.getId() + "]";
-						System.out.println(DataSite.getTimestamp() + " " + "Starting transaction " + tag);
+						print(TAG, "Starting transaction " + tag);
 						
 						/**/
 						for(Operation operation : transaction.getOperations()) {
@@ -310,7 +308,7 @@ public class DataSite implements Runnable, DataSiteInterface {
 						if(abort) {
 							
 							/**/
-							System.out.println(DataSite.getTimestamp() + " " + "Transaction " + transaction.getId() + " is aborted");
+							print(TAG, "Transaction " + transaction.getId() + " is aborted");
 							
 							/**/
 							abort = false;
@@ -324,7 +322,7 @@ public class DataSite implements Runnable, DataSiteInterface {
 							centralSiteStub.releaseLock(transaction);
 							
 							/**/
-							System.out.println(DataSite.getTimestamp() + " " + "Transaction " + transaction.getId() + " completed");
+							print(TAG, "Transaction " + transaction.getId() + " completed");
 							
 						}
 					}

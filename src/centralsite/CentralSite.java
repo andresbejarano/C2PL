@@ -24,12 +24,6 @@ public class CentralSite implements CentralSiteInterface {
 	/* The tag name of the class */
 	public static final String TAG = CentralSite.class.getName();
 	
-	/**/
-	public static final int DELAY_MILLISEC = 100;
-	
-	/**/
-	public static final int DEADLOCK_CHECK_PERIOD = 3000;
-	
 	/* The verbose option */
 	private static boolean verbose;
 	
@@ -43,11 +37,16 @@ public class CentralSite implements CentralSiteInterface {
 		return "[" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S").format(new Date()) + "]";
 	}
 	
+	public static boolean isVerbose() {
+		return verbose;
+	}
+	
 	/**
 	 * The main function.
 	 * Expected arguments:
 	 * 	[0]: Connection port (integer number)
-	 * 	[1]: verbose (true or false)
+	 *  [1]: Check deadlock delay (in milliseconds)
+	 * 	[2]: verbose (true or false)
 	 * @param argv
 	 */
 	public static void main (String[] args) {
@@ -56,13 +55,16 @@ public class CentralSite implements CentralSiteInterface {
 		try {
 			
 			/* Get the verbose option (true by default) */
-			verbose = (args.length > 1) ? Boolean.parseBoolean(args[1]) : true;
+			verbose = (args.length > 2) ? Boolean.parseBoolean(args[2]) : true;
 			
 			/* Get the port value */
 			int port = Integer.parseInt(args[0]);
+			
+			/* Get the check deadlock delay */
+			long checkDelay = Long.parseLong(args[1]);
 			 
 			/* Start the Central Site object */
-			new CentralSite(port);
+			new CentralSite(port, checkDelay);
 			println(TAG, "Central Site initiated at port " + port);
 		
 		}
@@ -134,23 +136,40 @@ public class CentralSite implements CentralSiteInterface {
 		
 	}
 	
+	public static void setVerbose(boolean verbose) {
+		CentralSite.verbose = verbose;
+	}
+
 	/* The lock manager */
 	private LockManager lockManager;
 	
 	/* The counter of registered data sites */
 	private int siteCount = 0;
-
+	
 	/* The port where the central site is running */
 	private int port;
+	
+	/* The check deadlock delay (in milliseconds) */
+	private long checkDelay;
+	
+	/* Keep track of the number of deadlocks found */
+	private int deadlockCount;
 	
 	/**
 	 * Constructor of the class
 	 * @param port
+	 * @param checkDelay
 	 */
-	public CentralSite(int port) {
+	public CentralSite(int port, long checkDelay) {
 		
 		/* Indicates the connection port of the central site */
 		this.port = port;
+		
+		/* Indicates the check deadlock delay (in milliseconds) */
+		this.checkDelay = checkDelay;
+		
+		/* Initialize the deadlock count */
+		deadlockCount = 0;
 		
 		/* Initiates the lock manager */
 		lockManager = new LockManager();
@@ -179,8 +198,8 @@ public class CentralSite implements CentralSiteInterface {
 					print(TAG, "Deadlock checked\n");
 				}
 				
-			}, CentralSite.DEADLOCK_CHECK_PERIOD, CentralSite.DEADLOCK_CHECK_PERIOD);
-			print(TAG, "Deadlock is checked every " + CentralSite.DEADLOCK_CHECK_PERIOD + " miliseconds");
+			}, checkDelay, checkDelay);
+			print(TAG, "Deadlock is checked every " + checkDelay + " miliseconds");
 			
 		}
 		catch(RemoteException e) {
@@ -194,7 +213,7 @@ public class CentralSite implements CentralSiteInterface {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * 
 	 */
@@ -207,6 +226,9 @@ public class CentralSite implements CentralSiteInterface {
 		
 		/* If there is result means there is a deadlock */
 		if(result != null) {
+			
+			/* A deadlock was found, increment the counter by one */
+			deadlockCount += 1;
 			
 			print(TAG, "Deadlock information obtained");
 			
@@ -277,6 +299,17 @@ public class CentralSite implements CentralSiteInterface {
 		else {
 			print(TAG, "Deadlock list is null = No deadlocks found");
 		}
+		
+		/* Print the number of deadlocks so far */
+		print(TAG, "Deadlocks found so far: " + deadlockCount);
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public long getCheckDelay() {
+		return checkDelay;
 	}
 
 	/**
@@ -329,6 +362,14 @@ public class CentralSite implements CentralSiteInterface {
 	 * 
 	 * @return
 	 */
+	public int getDeadlockCount() {
+		return this.deadlockCount;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
 	public LockManager getLockManager() {
 		print(TAG, "Lock Manager requested");
 		return lockManager;
@@ -351,7 +392,7 @@ public class CentralSite implements CentralSiteInterface {
 		print(TAG, "Site count requested");
 		return siteCount;
 	}
-	
+
 	/**
 	 * 
 	 * @return
@@ -365,7 +406,7 @@ public class CentralSite implements CentralSiteInterface {
 		/**/
 		return siteCount;
 	}
-
+	
 	/**
 	 * Releases the locks obtained by the given transaction
 	 */
@@ -399,7 +440,6 @@ public class CentralSite implements CentralSiteInterface {
 				
 				/* Unblock the data site */
 				print(TAG, "Requesting unblocking data site " + siteId);
-				//TODO
 				dataSiteStub.write();
 				print(TAG, "Information for site " + siteId + " was printed");
 				dataSiteStub.unblock();
@@ -451,6 +491,14 @@ public class CentralSite implements CentralSiteInterface {
 		
 		/* Since something went wrong return false */
 		return false;
+	}
+
+	/**
+	 * 
+	 * @param checkDelay
+	 */
+	public void setCheckDelay(long checkDelay) {
+		this.checkDelay = checkDelay;
 	}
 	
 	/**

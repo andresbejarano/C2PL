@@ -25,7 +25,7 @@ public class TransactionManager {
 	private int transactionIdCount = 1;
 
 	/* Offset for transaction id generation */
-	private int transactionIdOffset = 100;
+	private int transactionIdOffset = 10000;
 
 	/**
 	 * Constructor of the class
