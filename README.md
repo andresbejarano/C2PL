@@ -1,8 +1,12 @@
 # C2PL - Centralized Two-Phase Locking
 
-C2PL is an implementation of the Centralized Two-Phase Locking protocol applied to distributed database 
-systems. It is based on the C2PL algorithms described on Principles of Distributed Database Systems book
-by Ozsu and Valduriez.
+C2PL is an implementation of the Centralized Two-Phase Locking protocol applied to distributed database systems. It is based on the C2PL algorithms described on [Principles of Distributed Database Systems](http://www.springer.com/us/book/9781441988331) book by Ozsu and Valduriez.
+
+The project consists on two main modules:
+
+1. The Central Site module: Corresponds to the implementation of the central site in the system who is in charge of managing locks over the data items. It works along with the Lock Manager which keeps the lock table and gives the instructions for acquiring and releasing locks. This module doesn't have an associated data base.
+
+2. The Data Site module: References any site that runs transactions and require locks for the data items. Every data site requests the locks to the central site. It has associated a local data base which is managed by the Data Manager.
 
 C2PL uses the JDBC library for SQLite 3:
 
